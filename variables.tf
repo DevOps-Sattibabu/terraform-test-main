@@ -8,7 +8,7 @@
 #}
 variable "AWS_INSTANCE_AMI" {
   type = string
-  default = "ami-0cbbe2c6a1bb2ad63"
+  default = "ami-0cd582ee8a22cc7be"
   description = "aws instance ami"
 }
 variable "AWS_REGION" {
