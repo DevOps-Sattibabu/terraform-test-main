@@ -1,11 +1,11 @@
-variable "AWS_ACCESS_KEY" {
-  type = string
-  description = "aws access key value"
-}
-variable "AWS_SECRET_KEY" {
-  type = string
-  description = "aws secret key value"
-}
+#variable "AWS_ACCESS_KEY" {
+#  type = string
+#  description = "aws access key value"
+#}
+#variable "AWS_SECRET_KEY" {
+#  type = string
+#  description = "aws secret key value"
+#}
 variable "AWS_INSTANCE_AMI" {
   type = string
   default = "ami-0cbbe2c6a1bb2ad63"
