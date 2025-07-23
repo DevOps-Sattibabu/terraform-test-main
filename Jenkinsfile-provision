@@ -23,22 +23,22 @@ pipeline {
             bat """
             terraform --version
             REM Configure Terraform Cloud credentials
-            mkdir %USERPROFILE%\.terraform.d
+            mkdir %USERPROFILE%\\.terraform.d
             echo {
                 "credentials": {
                     "app.terraform.io": {
                     "token": "%TF_TOKEN_app_terraform_io%"
                     }
                 }
-            } > %USERPROFILE%\.terraform.d\credentials.tfrc.json
-            terraform init
+            } > %USERPROFILE%\\.terraform.d\\credentials.tfrc.json
+            terraform init -no-color
             """
         }
     }
     stage('terraform-action') {
         steps {
           bat """
-          terraform ${params.ACTION}
+          terraform ${params.ACTION} -no-color
           """
         }
     }
